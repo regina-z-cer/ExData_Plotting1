@@ -1,11 +1,11 @@
 # plot1.R
 # Construct the plot and save it to a PNG file 
 # with a width of 480 pixels and a height of 480 pixels.
-# power<-read.table("household_power_consumption.txt",sep=";",header=TRUE)
-# dim(power)
+power<-read.table("household_power_consumption.txt",sep=";",header=TRUE, na.strings="?")
+dim(power)
 
-# feb1_2<-subset(power, Date == "1/1/2007" | Date == "1/2/2007")
-
+# choose only feb 1 and 2 of 2006
+feb1_2<-subset(power, Date == "1/2/2007" | Date == "2/2/2007")
 # print(feb1_2)
 
 png(filename = "plot1.png")
